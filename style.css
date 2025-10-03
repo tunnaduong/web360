@@ -101,13 +101,6 @@ body.multiple-scenes.mobile #titleBar {
   line-height: 40px;
 }
 
-#fullscreenToggle {
-  display: none;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-}
-
 body.fullscreen-enabled #fullscreenToggle {
   display: flex;
 }
