@@ -20,67 +20,82 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <!-- Lightgallery CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css"
+    />
   </head>
   <body class="multiple-scenes view-control-buttons">
     <div id="pano"></div>
 
     <div id="sceneList">
       <div class="sidebar-content">
-        <div class="logo">
-          <img src="img/logo.png" alt="FPT Polytechnic Hà Nam" />
-        </div>
+        <div style="padding: 24px 20px 0 20px; position: relative; z-index: 1">
+          <div class="logo">
+            <img src="img/logo.png" alt="FPT Polytechnic Hà Nam" />
+          </div>
 
-        <div class="menu-section">
-          <h2 class="menu-title">THAM QUAN</h2>
-          <ul class="scenes">
-            <a href="javascript:void(0)" class="scene" data-id="0-ging-tri">
-              <li class="text">Tổng thể dự án</li>
-            </a>
-            <a href="javascript:void(0)" class="scene" data-id="1-snh-chnh">
-              <li class="text">Khu đạo bộ và sảnh</li>
-            </a>
-            <a
-              href="javascript:void(0)"
-              class="scene"
-              data-id="2-gn-phng-dch-v-sinh-vin"
-            >
-              <li class="text">Bể bơi vô cực và sân vườn</li>
-            </a>
-            <a
-              href="javascript:void(0)"
-              class="scene"
-              data-id="3-i-din-phng-hi-trng"
-            >
-              <li class="text">Vườn thư giãn và yoga</li>
-            </a>
-            <a href="javascript:void(0)" class="scene" data-id="4-phng-t-hc">
-              <li class="text">Sân khấu chân mây</li>
-            </a>
-            <a href="javascript:void(0)" class="scene" data-id="4-phng-t-hc">
-              <li class="text">Ban công nhìn ra thành phố</li>
-            </a>
-          </ul>
-        </div>
+          <div class="menu-section">
+            <h2 class="menu-title">THAM QUAN</h2>
+            <ul class="scenes">
+              <a href="javascript:void(0)" class="scene" data-id="0-ging-tri">
+                <li class="text">Tổng thể dự án</li>
+              </a>
+              <a href="javascript:void(0)" class="scene" data-id="1-snh-chnh">
+                <li class="text">Khu đạo bộ và sảnh</li>
+              </a>
+              <a
+                href="javascript:void(0)"
+                class="scene"
+                data-id="2-gn-phng-dch-v-sinh-vin"
+              >
+                <li class="text">Bể bơi vô cực và sân vườn</li>
+              </a>
+              <a
+                href="javascript:void(0)"
+                class="scene"
+                data-id="3-i-din-phng-hi-trng"
+              >
+                <li class="text">Vườn thư giãn và yoga</li>
+              </a>
+              <a href="javascript:void(0)" class="scene" data-id="4-phng-t-hc">
+                <li class="text">Sân khấu chân mây</li>
+              </a>
+              <a href="javascript:void(0)" class="scene">
+                <li class="text">Ban công nhìn ra thành phố</li>
+              </a>
+            </ul>
+          </div>
 
-        <div class="menu-section" style="margin-bottom: 0">
-          <h2 class="menu-title">TỔNG QUAN</h2>
-          <ul class="scenes">
-            <a href="javascript:void(0)" class="scene">
-              <li class="text">Thông tin dự án</li>
-            </a>
-            <a href="javascript:void(0)" class="scene">
-              <li class="text">Mặt bằng</li>
-            </a>
-            <a href="javascript:void(0)" class="scene">
-              <li class="text">Vị trí dự án</li>
-            </a>
-            <a href="javascript:void(0)" class="scene">
-              <li class="text">Album ảnh</li>
-            </a>
-            <a href="javascript:void(0)" class="scene">
-              <li class="text">Phim giới thiệu dự án</li>
-            </a>
-          </ul>
+          <div class="menu-section" style="margin-bottom: 0">
+            <h2 class="menu-title">TỔNG QUAN</h2>
+            <ul class="scenes">
+              <a href="javascript:void(0)" class="scene">
+                <li class="text">Thông tin dự án</li>
+              </a>
+              <a href="javascript:void(0)" class="scene">
+                <li class="text">Mặt bằng</li>
+              </a>
+              <a href="javascript:void(0)" class="scene">
+                <li class="text">Vị trí dự án</li>
+              </a>
+              <a href="javascript:void(0)" class="scene">
+                <li class="text">Album ảnh</li>
+              </a>
+              <a href="javascript:void(0)" class="scene">
+                <li class="text">Phim giới thiệu dự án</li>
+              </a>
+            </ul>
+          </div>
         </div>
 
         <div class="bottom-buttons">
@@ -108,12 +123,18 @@
           </a>
         </div>
       </div>
+      <div class="right-overlay"></div>
     </div>
 
     <a href="javascript:void(0)" id="sceneListToggle">
       <img class="icon off" src="img/expand.png" />
       <img class="icon on" src="img/collapse.png" />
     </a>
+
+    <!-- Mobile Logo -->
+    <div class="mobile-logo">
+      <img src="img/logo.png" alt="FPT Polytechnic Hà Nam" />
+    </div>
 
     <a
       href="javascript:void(0)"
@@ -161,6 +182,207 @@
     <script src="vendor/screenfull.min.js"></script>
     <script src="vendor/bowser.min.js"></script>
     <script src="vendor/marzipano.js"></script>
+
+    <!-- Modals -->
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Thông tin dự án</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="placeholder-content">
+            <h3>Tổng quan dự án</h3>
+            <div class="info-row">
+              <div class="info-label">Chủ đầu tư:</div>
+              <div class="info-value">Công ty ABC</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Vị trí:</div>
+              <div class="info-value">123 Đường XYZ, Quận ABC</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Quy mô:</div>
+              <div class="info-value">5.2 hecta</div>
+            </div>
+            <div class="info-row">
+              <div class="info-label">Mật độ xây dựng:</div>
+              <div class="info-value">40%</div>
+            </div>
+            <p class="project-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="layoutModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Mặt bằng</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="placeholder-content">
+            <div class="layout-tabs">
+              <button class="tab active" data-tab="tổng-thể">
+                Mặt bằng tổng thể
+              </button>
+              <button class="tab" data-tab="điển-hình">
+                Mặt bằng điển hình
+              </button>
+              <button class="tab" data-tab="chi-tiết">Chi tiết căn hộ</button>
+            </div>
+            <div class="layout-content">
+              <img
+                class="layout-image active"
+                data-tab="tổng-thể"
+                src="https://picsum.photos/800/500?random=1"
+                alt="Mặt bằng tổng thể"
+              />
+              <img
+                class="layout-image"
+                data-tab="điển-hình"
+                src="https://picsum.photos/800/500?random=10"
+                alt="Mặt bằng điển hình"
+              />
+              <img
+                class="layout-image"
+                data-tab="chi-tiết"
+                src="https://picsum.photos/800/500?random=11"
+                alt="Chi tiết căn hộ"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="locationModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Vị trí dự án</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="placeholder-content">
+            <div class="map-container">
+              <img
+                src="https://picsum.photos/800/400?random=2"
+                alt="Map placeholder"
+              />
+            </div>
+            <div class="location-highlights">
+              <h3>Tiện ích xung quanh</h3>
+              <ul>
+                <li>Trường học: 500m</li>
+                <li>Bệnh viện: 1km</li>
+                <li>Siêu thị: 300m</li>
+                <li>Công viên: 200m</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="galleryModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Album ảnh</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="placeholder-content">
+            <div class="gallery-grid" id="gallery-grid">
+              <a
+                href="https://picsum.photos/800/600?random=3"
+                data-lg-size="800-600"
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=3"
+                  alt="Gallery 1"
+                />
+              </a>
+              <a
+                href="https://picsum.photos/800/600?random=4"
+                data-lg-size="800-600"
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=4"
+                  alt="Gallery 2"
+                />
+              </a>
+              <a
+                href="https://picsum.photos/800/600?random=5"
+                data-lg-size="800-600"
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=5"
+                  alt="Gallery 3"
+                />
+              </a>
+              <a
+                href="https://picsum.photos/800/600?random=6"
+                data-lg-size="800-600"
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=6"
+                  alt="Gallery 4"
+                />
+              </a>
+              <a
+                href="https://picsum.photos/800/600?random=7"
+                data-lg-size="800-600"
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=7"
+                  alt="Gallery 5"
+                />
+              </a>
+              <a
+                href="https://picsum.photos/800/600?random=8"
+                data-lg-size="800-600"
+              >
+                <img
+                  src="https://picsum.photos/300/200?random=8"
+                  alt="Gallery 6"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Phim giới thiệu dự án</h2>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="placeholder-content">
+            <div class="video-container">
+              <img
+                src="https://picsum.photos/800/450?random=9"
+                alt="Video placeholder"
+              />
+              <div class="play-button">▶</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightgallery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
 
     <script src="data.js"></script>
     <script src="index.js"></script>

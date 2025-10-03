@@ -36,9 +36,13 @@
 
   // Set up music on start
   if (data.settings.musicOnStartEnabled) {
-    audio.play().catch(function (error) {
-      console.log("Audio autoplay failed:", error);
-    });
+    document.body.onclick = function () {
+      if (!this.hasPlayed) {
+        audio.loop = true;
+        audio.play();
+        this.hasPlayed = true;
+      }
+    };
     volumeToggleElement.classList.remove("enabled");
   } else {
     volumeToggleElement.classList.add("enabled");
@@ -518,4 +522,162 @@
 
   // Display the initial scene.
   switchScene(scenes[0]);
+
+  // Initialize lightgallery when DOM is ready
+  setTimeout(function () {
+    var galleryElement = document.getElementById("gallery-grid");
+    if (galleryElement && !galleryInitialized) {
+      lightGallery(galleryElement, {
+        plugins: [lgZoom, lgThumbnail],
+        speed: 500,
+        download: false,
+        counter: true,
+        enableDrag: true,
+        enableSwipe: true,
+        closable: true,
+        swipeToClose: true,
+        hideControlOnEnd: false,
+        mousewheel: true,
+        getCaptionFromTitleOrAlt: true,
+        appendSubHtmlTo: ".lg-sub-html",
+        subHtmlSelectorRelative: false,
+        preload: 1,
+        selector: "a",
+      });
+      galleryInitialized = true;
+    }
+  }, 1000);
+
+  // Handle modals
+  var modals = {
+    "Thông tin dự án": "infoModal",
+    "Mặt bằng": "layoutModal",
+    "Vị trí dự án": "locationModal",
+    "Album ảnh": "galleryModal",
+    "Phim giới thiệu dự án": "videoModal",
+  };
+
+  // Add click handlers for overview menu items
+  // Add click handlers for overview menu items
+  var overviewSection = document.querySelector(
+    "#sceneList .menu-section:nth-child(3)"
+  );
+  if (overviewSection) {
+    var sceneButtons = overviewSection.querySelectorAll(".scene");
+
+    sceneButtons.forEach(function (button) {
+      var textElement = button.querySelector(".text");
+      if (textElement) {
+        var modalId = modals[textElement.textContent];
+
+        if (modalId) {
+          // Add click handler to the entire button
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            var modal = document.getElementById(modalId);
+            if (modal) {
+              modal.classList.add("show");
+            }
+          });
+        }
+      }
+    });
+  }
+
+  // Add click handlers for modal close buttons
+  document.querySelectorAll(".modal-close").forEach(function (button) {
+    button.addEventListener("click", function () {
+      this.closest(".modal").classList.remove("show");
+    });
+  });
+
+  // Close modal when clicking outside
+  document.querySelectorAll(".modal").forEach(function (modal) {
+    modal.addEventListener("click", function (e) {
+      if (e.target === this) {
+        this.classList.remove("show");
+      }
+    });
+  });
+
+  // Handle tab switching in layout modal
+  document.querySelectorAll(".layout-tabs .tab").forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      // Remove active class from all tabs
+      document
+        .querySelectorAll(".layout-tabs .tab")
+        .forEach((t) => t.classList.remove("active"));
+      this.classList.add("active");
+
+      // Hide all images
+      document
+        .querySelectorAll(".layout-image")
+        .forEach((img) => img.classList.remove("active"));
+
+      // Show the corresponding image
+      var tabData = this.getAttribute("data-tab");
+      var targetImage = document.querySelector(
+        '.layout-image[data-tab="' + tabData + '"]'
+      );
+      if (targetImage) {
+        targetImage.classList.add("active");
+      }
+    });
+  });
+
+  // Initialize lightgallery when gallery modal is opened
+  var galleryInitialized = false;
+
+  // Listen for modal show events
+  document.addEventListener("click", function (e) {
+    if (
+      e.target.closest(".scene") &&
+      e.target.closest(".scene").textContent.includes("Album ảnh")
+    ) {
+      setTimeout(function () {
+        if (!galleryInitialized) {
+          var galleryElement = document.getElementById("gallery-grid");
+          if (galleryElement) {
+            lightGallery(galleryElement, {
+              plugins: [lgZoom, lgThumbnail],
+              speed: 500,
+              download: false,
+              counter: true,
+              enableDrag: true,
+              enableSwipe: true,
+            });
+            galleryInitialized = true;
+          }
+        }
+      }, 500);
+    }
+  });
+
+  // Also initialize when modal is shown
+  document
+    .getElementById("galleryModal")
+    .addEventListener("click", function (e) {
+      if (e.target.classList.contains("modal-close") || e.target === this) {
+        return;
+      }
+
+      setTimeout(function () {
+        if (!galleryInitialized) {
+          var galleryElement = document.getElementById("gallery-grid");
+          if (galleryElement) {
+            lightGallery(galleryElement, {
+              plugins: [lgZoom, lgThumbnail],
+              speed: 500,
+              download: false,
+              counter: true,
+              enableDrag: true,
+              enableSwipe: true,
+            });
+            galleryInitialized = true;
+          }
+        }
+      }, 300);
+    });
 })();
