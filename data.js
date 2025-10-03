@@ -258,8 +258,9 @@ var APP_DATA = {
   name: "Virtual Tour 360 - FPT Polytechnic Hà Nam",
   settings: {
     mouseViewMode: "drag",
-    autorotateEnabled: false,
+    autorotateEnabled: true,
     fullscreenButton: true,
     viewControlButtons: true,
+    musicOnStartEnabled: true,
   },
 };

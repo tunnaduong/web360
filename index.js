@@ -16,19 +16,13 @@
 "use strict";
 
 (function () {
-  var audio = new Audio("serenade.mp3");
-  document.body.onclick = function () {
-    if (!this.hasPlayed) {
-      audio.loop = true;
-      audio.play();
-      this.hasPlayed = true;
-    }
-  };
-
   var Marzipano = window.Marzipano;
   var bowser = window.bowser;
   var screenfull = window.screenfull;
   var data = window.APP_DATA;
+  var audio = new Audio("serenade.mp3");
+
+  audio.loop = true;
 
   // Grab elements from DOM.
   var panoElement = document.querySelector("#pano");
@@ -39,6 +33,16 @@
   var autorotateToggleElement = document.querySelector("#autorotateToggle");
   var fullscreenToggleElement = document.querySelector("#fullscreenToggle");
   var volumeToggleElement = document.querySelector("#volumeToggle");
+
+  // Set up music on start
+  if (data.settings.musicOnStartEnabled) {
+    audio.play().catch(function (error) {
+      console.log("Audio autoplay failed:", error);
+    });
+    volumeToggleElement.classList.remove("enabled");
+  } else {
+    volumeToggleElement.classList.add("enabled");
+  }
 
   // Handle volume toggle
   volumeToggleElement.addEventListener("click", function () {
@@ -153,18 +157,43 @@
   // Set handler for autorotate toggle.
   autorotateToggleElement.addEventListener("click", toggleAutorotate);
 
-  // Set up fullscreen mode, if supported.
-  if (screenfull.enabled && data.settings.fullscreenButton) {
+  // Set up fullscreen mode
+  if (data.settings.fullscreenButton) {
     document.body.classList.add("fullscreen-enabled");
     fullscreenToggleElement.addEventListener("click", function () {
-      screenfull.toggle();
-    });
-    screenfull.on("change", function () {
-      if (screenfull.isFullscreen) {
-        fullscreenToggleElement.classList.add("enabled");
-      } else {
-        fullscreenToggleElement.classList.remove("enabled");
+      try {
+        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+          if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+          } else if (document.documentElement.webkitRequestFullscreen) {
+            document.documentElement.webkitRequestFullscreen();
+          }
+          fullscreenToggleElement.classList.add("enabled");
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          }
+          fullscreenToggleElement.classList.remove("enabled");
+        }
+      } catch (err) {
+        console.log("Fullscreen API error:", err);
       }
+    });
+
+    // Handle fullscreen change events
+    document.addEventListener("fullscreenchange", function () {
+      fullscreenToggleElement.classList.toggle(
+        "enabled",
+        !!document.fullscreenElement
+      );
+    });
+    document.addEventListener("webkitfullscreenchange", function () {
+      fullscreenToggleElement.classList.toggle(
+        "enabled",
+        !!document.webkitFullscreenElement
+      );
     });
   } else {
     document.body.classList.add("fullscreen-disabled");
@@ -276,13 +305,13 @@
     scene.view.setParameters(scene.data.initialViewParameters);
     scene.scene.switchTo();
     startAutorotate();
-    updateSceneName(scene);
+    // updateSceneName(scene);
     updateSceneList(scene);
   }
 
-  function updateSceneName(scene) {
-    sceneNameElement.innerHTML = sanitize(scene.data.name);
-  }
+  // function updateSceneName(scene) {
+  //   sceneNameElement.innerHTML = sanitize(scene.data.name);
+  // }
 
   function updateSceneList(scene) {
     for (var i = 0; i < sceneElements.length; i++) {
@@ -341,7 +370,7 @@
 
     // Create image element.
     var icon = document.createElement("img");
-    icon.src = "img/link.png";
+    icon.src = "img/link.gif";
     icon.classList.add("link-hotspot-icon");
 
     // Set rotation transform.

@@ -13,61 +13,102 @@
       }
     </style>
     <link rel="stylesheet" href="vendor/reset.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="multiple-scenes view-control-buttons">
     <div id="pano"></div>
 
     <div id="sceneList">
-      <ul class="scenes">
-        <a href="javascript:void(0)" class="scene" data-id="0-ging-tri">
-          <li class="text">Giếng trời</li>
-        </a>
+      <div class="sidebar-content">
+        <div class="logo">
+          <img src="img/logo.png" alt="FPT Polytechnic Hà Nam" />
+        </div>
 
-        <a href="javascript:void(0)" class="scene" data-id="1-snh-chnh">
-          <li class="text">Sảnh chính</li>
-        </a>
+        <div class="menu-section">
+          <h2 class="menu-title">THAM QUAN</h2>
+          <ul class="scenes">
+            <a href="javascript:void(0)" class="scene" data-id="0-ging-tri">
+              <li class="text">Tổng thể dự án</li>
+            </a>
+            <a href="javascript:void(0)" class="scene" data-id="1-snh-chnh">
+              <li class="text">Khu đạo bộ và sảnh</li>
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="scene"
+              data-id="2-gn-phng-dch-v-sinh-vin"
+            >
+              <li class="text">Bể bơi vô cực và sân vườn</li>
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="scene"
+              data-id="3-i-din-phng-hi-trng"
+            >
+              <li class="text">Vườn thư giãn và yoga</li>
+            </a>
+            <a href="javascript:void(0)" class="scene" data-id="4-phng-t-hc">
+              <li class="text">Sân khấu chân mây</li>
+            </a>
+            <a href="javascript:void(0)" class="scene" data-id="4-phng-t-hc">
+              <li class="text">Ban công nhìn ra thành phố</li>
+            </a>
+          </ul>
+        </div>
 
-        <a
-          href="javascript:void(0)"
-          class="scene"
-          data-id="2-gn-phng-dch-v-sinh-vin"
-        >
-          <li class="text">Gần phòng dịch vụ sinh viên</li>
-        </a>
+        <div class="menu-section" style="margin-bottom: 0">
+          <h2 class="menu-title">TỔNG QUAN</h2>
+          <ul class="scenes">
+            <a href="javascript:void(0)" class="scene">
+              <li class="text">Thông tin dự án</li>
+            </a>
+            <a href="javascript:void(0)" class="scene">
+              <li class="text">Mặt bằng</li>
+            </a>
+            <a href="javascript:void(0)" class="scene">
+              <li class="text">Vị trí dự án</li>
+            </a>
+            <a href="javascript:void(0)" class="scene">
+              <li class="text">Album ảnh</li>
+            </a>
+            <a href="javascript:void(0)" class="scene">
+              <li class="text">Phim giới thiệu dự án</li>
+            </a>
+          </ul>
+        </div>
 
-        <a
-          href="javascript:void(0)"
-          class="scene"
-          data-id="3-i-din-phng-hi-trng"
-        >
-          <li class="text">Đối diện phòng hội trường</li>
-        </a>
+        <div class="bottom-buttons">
+          <a href="javascript:void(0)" id="volumeToggle" class="circle-button">
+            <img class="icon off" src="img/volume.png" />
+            <img class="icon on" src="img/mute.png" />
+          </a>
 
-        <a href="javascript:void(0)" class="scene" data-id="4-phng-t-hc">
-          <li class="text">Phòng tự học</li>
-        </a>
-      </ul>
+          <a
+            href="javascript:void(0)"
+            id="autorotateToggle"
+            class="circle-button"
+          >
+            <img class="icon off" src="img/play.png" />
+            <img class="icon on" src="img/pause.png" />
+          </a>
+
+          <a
+            href="javascript:void(0)"
+            id="fullscreenToggle"
+            class="circle-button"
+          >
+            <img class="icon off" src="img/fullscreen.png" />
+            <img class="icon on" src="img/windowed.png" />
+          </a>
+        </div>
+      </div>
     </div>
-
-    <div id="titleBar">
-      <h1 class="sceneName"></h1>
-    </div>
-
-    <a href="javascript:void(0)" id="volumeToggle">
-      <img class="icon off" src="img/volume.png" />
-      <img class="icon on" src="img/mute.png" />
-    </a>
-
-    <a href="javascript:void(0)" id="autorotateToggle">
-      <img class="icon off" src="img/play.png" />
-      <img class="icon on" src="img/pause.png" />
-    </a>
-
-    <a href="javascript:void(0)" id="fullscreenToggle">
-      <img class="icon off" src="img/fullscreen.png" />
-      <img class="icon on" src="img/windowed.png" />
-    </a>
 
     <a href="javascript:void(0)" id="sceneListToggle">
       <img class="icon off" src="img/expand.png" />
