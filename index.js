@@ -216,13 +216,15 @@
     var el = document.querySelector(
       '#sceneList .scene[data-id="' + scene.data.id + '"]'
     );
-    el.addEventListener("click", function () {
-      switchScene(scene);
-      // On mobile, hide scene list after selecting a scene.
-      if (document.body.classList.contains("mobile")) {
-        hideSceneList();
-      }
-    });
+    if (el) {
+      el.addEventListener("click", function () {
+        switchScene(scene);
+        // On mobile, hide scene list after selecting a scene.
+        if (document.body.classList.contains("mobile")) {
+          hideSceneList();
+        }
+      });
+    }
   });
 
   // DOM elements for view controls.
@@ -521,7 +523,8 @@
   }
 
   // Display the initial scene.
-  switchScene(scenes[0]);
+  var initialScene = findSceneById("22-tng-th") || scenes[0];
+  switchScene(initialScene);
 
   // Initialize lightgallery when DOM is ready
   setTimeout(function () {
