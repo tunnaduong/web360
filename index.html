@@ -180,44 +180,21 @@
     <script src="vendor/marzipano.js"></script>
 
     <!-- Modals -->
-    <div id="infoModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">Thông tin dự án</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="placeholder-content">
-            <h3>Tổng quan dự án</h3>
-            <div class="info-row">
-              <div class="info-label">Chủ đầu tư:</div>
-              <div class="info-value">Công ty ABC</div>
-            </div>
-            <div class="info-row">
-              <div class="info-label">Vị trí:</div>
-              <div class="info-value">123 Đường XYZ, Quận ABC</div>
-            </div>
-            <div class="info-row">
-              <div class="info-label">Quy mô:</div>
-              <div class="info-value">5.2 hecta</div>
-            </div>
-            <div class="info-row">
-              <div class="info-label">Mật độ xây dựng:</div>
-              <div class="info-value">40%</div>
-            </div>
-            <p class="project-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
+    <div id="infoModal" class="modal ad-modal">
+      <div class="modal-content ad-modal-content">
+        <button class="modal-close ad-modal-close">&times;</button>
+        <div class="ad-modal-image-container">
+          <img
+            src="img/du-an/Thong tin du an.jpg"
+            alt="Thông tin dự án"
+            class="ad-modal-image"
+          />
         </div>
       </div>
     </div>
 
     <div id="layoutModal" class="modal">
-      <div class="modal-content">
+      <div class="modal-content" id="mat-bang-modal">
         <div class="modal-header">
           <h2 class="modal-title">Mặt bằng</h2>
           <button class="modal-close">&times;</button>
@@ -225,32 +202,28 @@
         <div class="modal-body">
           <div class="placeholder-content">
             <div class="layout-tabs">
-              <button class="tab active" data-tab="tổng-thể">
-                Mặt bằng tổng thể
-              </button>
-              <button class="tab" data-tab="điển-hình">
-                Mặt bằng điển hình
-              </button>
-              <button class="tab" data-tab="chi-tiết">Chi tiết căn hộ</button>
+              <button class="tab active" data-tab="ct1">Tòa CT1</button>
+              <button class="tab" data-tab="ct2">Tòa CT2</button>
+              <button class="tab" data-tab="ct3">Tòa CT3</button>
             </div>
             <div class="layout-content">
               <img
                 class="layout-image active"
-                data-tab="tổng-thể"
-                src="https://picsum.photos/800/500?random=1"
-                alt="Mặt bằng tổng thể"
+                data-tab="ct1"
+                src="img/du-an/mat-bang/CT1.jpg"
+                alt="Tòa CT1"
               />
               <img
                 class="layout-image"
-                data-tab="điển-hình"
-                src="https://picsum.photos/800/500?random=10"
-                alt="Mặt bằng điển hình"
+                data-tab="ct2"
+                src="img/du-an/mat-bang/CT2.jpg"
+                alt="Tòa CT2"
               />
               <img
                 class="layout-image"
-                data-tab="chi-tiết"
-                src="https://picsum.photos/800/500?random=11"
-                alt="Chi tiết căn hộ"
+                data-tab="ct3"
+                src="img/du-an/mat-bang/CT3.jpg"
+                alt="Tòa CT3"
               />
             </div>
           </div>
@@ -258,30 +231,15 @@
       </div>
     </div>
 
-    <div id="locationModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">Vị trí dự án</h2>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="placeholder-content">
-            <div class="map-container">
-              <img
-                src="https://picsum.photos/800/400?random=2"
-                alt="Map placeholder"
-              />
-            </div>
-            <div class="location-highlights">
-              <h3>Tiện ích xung quanh</h3>
-              <ul>
-                <li>Trường học: 500m</li>
-                <li>Bệnh viện: 1km</li>
-                <li>Siêu thị: 300m</li>
-                <li>Công viên: 200m</li>
-              </ul>
-            </div>
-          </div>
+    <div id="locationModal" class="modal ad-modal">
+      <div class="modal-content ad-modal-content">
+        <button class="modal-close ad-modal-close">&times;</button>
+        <div class="ad-modal-image-container">
+          <img
+            src="img/du-an/Vi tri du an.jpg"
+            alt="Vị trí dự án"
+            class="ad-modal-image"
+          />
         </div>
       </div>
     </div>

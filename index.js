@@ -599,8 +599,17 @@
   // Close modal when clicking outside
   document.querySelectorAll(".modal").forEach(function (modal) {
     modal.addEventListener("click", function (e) {
-      if (e.target === this) {
-        this.classList.remove("show");
+      // For ad modals, close when clicking anywhere on the backdrop
+      // For regular modals, close when clicking outside modal-content
+      if (modal.classList.contains("ad-modal")) {
+        // Only close if clicking directly on the modal backdrop, not on the image
+        if (e.target === this) {
+          this.classList.remove("show");
+        }
+      } else {
+        if (e.target === this) {
+          this.classList.remove("show");
+        }
       }
     });
   });
@@ -627,6 +636,14 @@
       if (targetImage) {
         targetImage.classList.add("active");
       }
+    });
+  });
+
+  // Add click handlers for ad modal close buttons
+  document.querySelectorAll(".ad-modal-close").forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.stopPropagation();
+      this.closest(".modal").classList.remove("show");
     });
   });
 
