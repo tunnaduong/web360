@@ -314,7 +314,7 @@ body.fullscreen-enabled #fullscreenToggle {
 #sceneList .scene {
   display: flex;
   align-items: center;
-  padding: 2px 16px;
+  padding: 2px 15px;
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
