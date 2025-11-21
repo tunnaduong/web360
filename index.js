@@ -33,6 +33,8 @@
   var autorotateToggleElement = document.querySelector("#autorotateToggle");
   var fullscreenToggleElement = document.querySelector("#fullscreenToggle");
   var volumeToggleElement = document.querySelector("#volumeToggle");
+  var loadingElement = document.querySelector("#loading");
+  var loadingHidden = false;
 
   // Set up music on start
   if (data.settings.musicOnStartEnabled) {
@@ -313,6 +315,23 @@
     startAutorotate();
     // updateSceneName(scene);
     updateSceneList(scene);
+    
+    // Hide loading when scene is loaded (only on first load)
+    if (loadingElement && !loadingHidden) {
+      // Wait for scene to render, then hide loading
+      setTimeout(function() {
+        if (loadingElement && !loadingHidden) {
+          loadingHidden = true;
+          loadingElement.classList.add("hidden");
+          // Remove from DOM after animation
+          setTimeout(function() {
+            if (loadingElement && loadingElement.parentNode) {
+              loadingElement.parentNode.removeChild(loadingElement);
+            }
+          }, 300);
+        }
+      }, 500);
+    }
   }
 
   // function updateSceneName(scene) {
