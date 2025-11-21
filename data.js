@@ -1,8 +1,8 @@
 var APP_DATA = {
   scenes: [
     {
-      id: "0-cn-h-01---phng-khch",
-      name: "Căn hộ 01 - Phòng khách",
+      id: "0-tour-360---ch01---1",
+      name: "Căn hộ góc: 2 phòng ngủ - 2 WC",
       levels: [
         {
           tileSize: 256,
@@ -26,29 +26,35 @@ var APP_DATA = {
       },
       linkHotspots: [
         {
-          yaw: -1.1516022575514686,
-          pitch: -0.025709445781860296,
-          rotation: 12.566370614359176,
-          target: "1-cn-h-01---phng-ng-1",
+          yaw: -1.3495840397189554,
+          pitch: -0.0052778114886304905,
+          rotation: 0,
+          target: "1-tour-360---ch01---2",
         },
         {
-          yaw: -2.0497820804099334,
-          pitch: -0.022553371564061564,
+          yaw: -2.1664363944346654,
+          pitch: 0.002974720040723966,
           rotation: 0,
-          target: "2-cn-h-01---phng-ng-2",
+          target: "2-tour-360---ch01---3",
         },
         {
-          yaw: -2.9820697740382265,
-          pitch: 0.017037607577371716,
+          yaw: -2.522063820348553,
+          pitch: 0.0015257836985789197,
           rotation: 0,
-          target: "22-tng-th",
+          target: "27-tour-360---wc",
+        },
+        {
+          yaw: -2.979590692563594,
+          pitch: -0.0018626437393010065,
+          rotation: 0,
+          target: "26-tour-360---tong-the-lk-vung---final",
         },
       ],
       infoHotspots: [],
     },
     {
-      id: "1-cn-h-01---phng-ng-1",
-      name: "Căn hộ 01 - Phòng ngủ 1",
+      id: "1-tour-360---ch01---2",
+      name: "Phòng ngủ master",
       levels: [
         {
           tileSize: 256,
@@ -72,17 +78,17 @@ var APP_DATA = {
       },
       linkHotspots: [
         {
-          yaw: -1.889348693165644,
-          pitch: -0.03060288605676753,
-          rotation: 4.71238898038469,
-          target: "0-cn-h-01---phng-khch",
+          yaw: -1.9055341575996412,
+          pitch: -0.05742569516357676,
+          rotation: 0,
+          target: "0-tour-360---ch01---1",
         },
       ],
       infoHotspots: [],
     },
     {
-      id: "2-cn-h-01---phng-ng-2",
-      name: "Căn hộ 01 - Phòng ngủ 2",
+      id: "2-tour-360---ch01---3",
+      name: "Phòng ngủ",
       levels: [
         {
           tileSize: 256,
@@ -106,17 +112,55 @@ var APP_DATA = {
       },
       linkHotspots: [
         {
-          yaw: -1.6313246943522657,
-          pitch: -0.02697376355477843,
+          yaw: -1.6312714777958952,
+          pitch: -0.014814708582505887,
           rotation: 0,
-          target: "0-cn-h-01---phng-khch",
+          target: "0-tour-360---ch01---1",
         },
       ],
       infoHotspots: [],
     },
     {
-      id: "3-cn-h-02---phng-khch",
-      name: "Căn hộ 02 - Phòng khách",
+      id: "3-tour-360---ch01---4",
+      name: "WC",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+        {
+          tileSize: 512,
+          size: 2048,
+        },
+      ],
+      faceSize: 2048,
+      initialViewParameters: {
+        pitch: 0.1414440344618484,
+        yaw: 1.6044438956524516,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: 0.2775319737280242,
+          pitch: 0.24789129644667263,
+          rotation: 0,
+          target: "18-tour-360---ch07---1",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "4-tour-360---ch02---1",
+      name: "Căn hộ: 2 phòng ngủ - 1 WC",
       levels: [
         {
           tileSize: 256,
@@ -140,29 +184,29 @@ var APP_DATA = {
       },
       linkHotspots: [
         {
-          yaw: -0.6111205879211283,
-          pitch: 0.03343839625427947,
+          yaw: -0.8749364870562353,
+          pitch: 0.02869175506518573,
           rotation: 0,
-          target: "4-cn-h-02---phng-ng-2",
+          target: "7-tour-360---ch02---4",
         },
         {
-          yaw: -0.8103900896660896,
-          pitch: 0.036295664480206824,
+          yaw: -0.677708514005527,
+          pitch: 0.04241027885431237,
           rotation: 0,
-          target: "5-cn-h-02---phng-ng-1",
+          target: "6-tour-360---ch02---3",
         },
         {
-          yaw: 1.4103058992442552,
-          pitch: 0.03569832615036184,
+          yaw: 1.4245625779983726,
+          pitch: 0.02578573752461999,
           rotation: 0,
-          target: "22-tng-th",
+          target: "26-tour-360---tong-the-lk-vung---final",
         },
       ],
       infoHotspots: [],
     },
     {
-      id: "4-cn-h-02---phng-ng-2",
-      name: "Căn hộ 02 - Phòng ngủ 2",
+      id: "6-tour-360---ch02---3",
+      name: "Phòng ngủ",
       levels: [
         {
           tileSize: 256,
@@ -186,17 +230,17 @@ var APP_DATA = {
       },
       linkHotspots: [
         {
-          yaw: -1.9764122613095445,
-          pitch: -0.13335521127041794,
-          rotation: 10.995574287564278,
-          target: "3-cn-h-02---phng-khch",
+          yaw: -2.016205673235822,
+          pitch: 0.01883184740695043,
+          rotation: 0,
+          target: "4-tour-360---ch02---1",
         },
       ],
       infoHotspots: [],
     },
     {
-      id: "5-cn-h-02---phng-ng-1",
-      name: "Căn hộ 02 - Phòng ngủ 1",
+      id: "7-tour-360---ch02---4",
+      name: "Phòng ngủ",
       levels: [
         {
           tileSize: 256,
@@ -220,17 +264,17 @@ var APP_DATA = {
       },
       linkHotspots: [
         {
-          yaw: 1.5520879503700957,
-          pitch: -0.054754549381820894,
+          yaw: 1.5266579828469826,
+          pitch: -0.008485478295241933,
           rotation: 0,
-          target: "3-cn-h-02---phng-khch",
+          target: "4-tour-360---ch02---1",
         },
       ],
       infoHotspots: [],
     },
     {
-      id: "6-cn-h-03---phng-ng-1",
-      name: "Căn hộ 03 - Phòng ngủ 1",
+      id: "8-tour-360---ch03---1",
+      name: "Phòng ngủ master",
       levels: [
         {
           tileSize: 256,
@@ -248,23 +292,23 @@ var APP_DATA = {
       ],
       faceSize: 1000,
       initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
+        pitch: 0.21821493179818852,
+        yaw: -0.16787550440250065,
+        fov: 1.1056506015171,
       },
       linkHotspots: [
         {
-          yaw: 1.5920349778738512,
-          pitch: 0.1098007025936738,
+          yaw: 1.5648626096724678,
+          pitch: 0.15953577370045302,
           rotation: 0,
-          target: "8-cn-h-03---phng-khch",
+          target: "10-tour-360---ch03---3",
         },
       ],
       infoHotspots: [],
     },
     {
-      id: "7-cn-h-03---phng-bp",
-      name: "Căn hộ 03 - Phòng bếp",
+      id: "9-tour-360---ch03---2",
+      name: "Phòng bếp",
       levels: [
         {
           tileSize: 256,
@@ -282,411 +326,23 @@ var APP_DATA = {
       ],
       faceSize: 1000,
       initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
+        pitch: 0.18900541384068958,
+        yaw: 0.5421267289292739,
+        fov: 1.1056506015171,
       },
       linkHotspots: [
         {
-          yaw: 1.4216074044759868,
-          pitch: 0.06658825926380807,
+          yaw: 1.4077125036696092,
+          pitch: 0.11286610900796745,
           rotation: 0,
-          target: "8-cn-h-03---phng-khch",
+          target: "10-tour-360---ch03---3",
         },
       ],
       infoHotspots: [],
     },
     {
-      id: "8-cn-h-03---phng-khch",
-      name: "Căn hộ 03 - Phòng khách",
-      levels: [
-        {
-          tileSize: 256,
-          size: 256,
-          fallbackOnly: true,
-        },
-        {
-          tileSize: 512,
-          size: 512,
-        },
-        {
-          tileSize: 512,
-          size: 1024,
-        },
-      ],
-      faceSize: 1000,
-      initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
-      },
-      linkHotspots: [
-        {
-          yaw: -0.02440078511390098,
-          pitch: 0.15605988656638914,
-          rotation: 0,
-          target: "9-cn-h-03---phng-ng-2",
-        },
-        {
-          yaw: 0.5132123109929445,
-          pitch: 0.14840617306621162,
-          rotation: 0,
-          target: "7-cn-h-03---phng-bp",
-        },
-        {
-          yaw: 1.1117659479485873,
-          pitch: 0.12803537560820644,
-          rotation: 0,
-          target: "6-cn-h-03---phng-ng-1",
-        },
-        {
-          yaw: 1.8639834104219979,
-          pitch: 0.09592049973813666,
-          rotation: 0,
-          target: "22-tng-th",
-        },
-      ],
-      infoHotspots: [],
-    },
-    {
-      id: "9-cn-h-03---phng-ng-2",
-      name: "Căn hộ 03 - Phòng ngủ 2",
-      levels: [
-        {
-          tileSize: 256,
-          size: 256,
-          fallbackOnly: true,
-        },
-        {
-          tileSize: 512,
-          size: 512,
-        },
-        {
-          tileSize: 512,
-          size: 1024,
-        },
-      ],
-      faceSize: 1000,
-      initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
-      },
-      linkHotspots: [
-        {
-          yaw: 2.2065267213836224,
-          pitch: 0.22705642044637386,
-          rotation: 0,
-          target: "8-cn-h-03---phng-khch",
-        },
-      ],
-      infoHotspots: [],
-    },
-    {
-      id: "10-cn-h-04---phng-khch",
-      name: "Căn hộ 04 - Phòng khách",
-      levels: [
-        {
-          tileSize: 256,
-          size: 256,
-          fallbackOnly: true,
-        },
-        {
-          tileSize: 512,
-          size: 512,
-        },
-        {
-          tileSize: 512,
-          size: 1024,
-        },
-      ],
-      faceSize: 1000,
-      initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
-      },
-      linkHotspots: [
-        {
-          yaw: 1.5407575602051402,
-          pitch: 0.10873519208942106,
-          rotation: 0,
-          target: "22-tng-th",
-        },
-      ],
-      infoHotspots: [],
-    },
-    {
-      id: "11-cn-h-05---phng-ng-1",
-      name: "Căn hộ 05 - Phòng ngủ 1",
-      levels: [
-        {
-          tileSize: 256,
-          size: 256,
-          fallbackOnly: true,
-        },
-        {
-          tileSize: 512,
-          size: 512,
-        },
-        {
-          tileSize: 512,
-          size: 1024,
-        },
-      ],
-      faceSize: 1000,
-      initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
-      },
-      linkHotspots: [
-        {
-          yaw: 1.9156271361247779,
-          pitch: 0.06877436624888489,
-          rotation: 0,
-          target: "13-cn-h-05---phng-khch",
-        },
-      ],
-      infoHotspots: [],
-    },
-    {
-      id: "12-cn-h-05---phng-ng-2",
-      name: "Căn hộ 05 - Phòng ngủ 2",
-      levels: [
-        {
-          tileSize: 256,
-          size: 256,
-          fallbackOnly: true,
-        },
-        {
-          tileSize: 512,
-          size: 512,
-        },
-        {
-          tileSize: 512,
-          size: 1024,
-        },
-      ],
-      faceSize: 1000,
-      initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
-      },
-      linkHotspots: [
-        {
-          yaw: 1.8544687112210436,
-          pitch: 0.05582891523186362,
-          rotation: 0,
-          target: "13-cn-h-05---phng-khch",
-        },
-      ],
-      infoHotspots: [],
-    },
-    {
-      id: "13-cn-h-05---phng-khch",
-      name: "Căn hộ 05 - Phòng khách",
-      levels: [
-        {
-          tileSize: 256,
-          size: 256,
-          fallbackOnly: true,
-        },
-        {
-          tileSize: 512,
-          size: 512,
-        },
-        {
-          tileSize: 512,
-          size: 1024,
-        },
-      ],
-      faceSize: 1000,
-      initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
-      },
-      linkHotspots: [
-        {
-          yaw: -1.2642971467090351,
-          pitch: 0.05421053139096266,
-          rotation: 4.71238898038469,
-          target: "12-cn-h-05---phng-ng-2",
-        },
-        {
-          yaw: -0.9702286361879597,
-          pitch: 0.04836692307699764,
-          rotation: 7.853981633974483,
-          target: "11-cn-h-05---phng-ng-1",
-        },
-        {
-          yaw: 1.3651699363618022,
-          pitch: 0.06073175090353722,
-          rotation: 0.7853981633974483,
-          target: "22-tng-th",
-        },
-      ],
-      infoHotspots: [],
-    },
-    {
-      id: "14-cn-h-06---phng-khch",
-      name: "Căn hộ 06 - Phòng khách",
-      levels: [
-        {
-          tileSize: 256,
-          size: 256,
-          fallbackOnly: true,
-        },
-        {
-          tileSize: 512,
-          size: 512,
-        },
-        {
-          tileSize: 512,
-          size: 1024,
-        },
-      ],
-      faceSize: 1000,
-      initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
-      },
-      linkHotspots: [
-        {
-          yaw: -0.029763286029586666,
-          pitch: 0.10464108185692922,
-          rotation: 0,
-          target: "17-cn-h-06---phng-ng-2",
-        },
-        {
-          yaw: 1.116178044385153,
-          pitch: 0.15223889569285554,
-          rotation: 0,
-          target: "16-cn-h-06---phng-ng-1",
-        },
-        {
-          yaw: 0.4429303709308474,
-          pitch: 0.159177417173197,
-          rotation: 0,
-          target: "15-cn-h-06---phng-bp",
-        },
-        {
-          yaw: 1.8568495878474742,
-          pitch: 0.12593850619746227,
-          rotation: 0,
-          target: "22-tng-th",
-        },
-      ],
-      infoHotspots: [],
-    },
-    {
-      id: "15-cn-h-06---phng-bp",
-      name: "Căn hộ 06 - Phòng bếp",
-      levels: [
-        {
-          tileSize: 256,
-          size: 256,
-          fallbackOnly: true,
-        },
-        {
-          tileSize: 512,
-          size: 512,
-        },
-        {
-          tileSize: 512,
-          size: 1024,
-        },
-      ],
-      faceSize: 1000,
-      initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
-      },
-      linkHotspots: [
-        {
-          yaw: 1.4098344399085558,
-          pitch: 0.18383002959302175,
-          rotation: 0,
-          target: "14-cn-h-06---phng-khch",
-        },
-      ],
-      infoHotspots: [],
-    },
-    {
-      id: "16-cn-h-06---phng-ng-1",
-      name: "Căn hộ 06 - Phòng ngủ 1",
-      levels: [
-        {
-          tileSize: 256,
-          size: 256,
-          fallbackOnly: true,
-        },
-        {
-          tileSize: 512,
-          size: 512,
-        },
-        {
-          tileSize: 512,
-          size: 1024,
-        },
-      ],
-      faceSize: 1000,
-      initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
-      },
-      linkHotspots: [
-        {
-          yaw: 1.599419243865329,
-          pitch: 0.1954217516815664,
-          rotation: 0,
-          target: "14-cn-h-06---phng-khch",
-        },
-      ],
-      infoHotspots: [],
-    },
-    {
-      id: "17-cn-h-06---phng-ng-2",
-      name: "Căn hộ 06 - Phòng ngủ 2",
-      levels: [
-        {
-          tileSize: 256,
-          size: 256,
-          fallbackOnly: true,
-        },
-        {
-          tileSize: 512,
-          size: 512,
-        },
-        {
-          tileSize: 512,
-          size: 1024,
-        },
-      ],
-      faceSize: 1000,
-      initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
-      },
-      linkHotspots: [
-        {
-          yaw: 2.2217692192174425,
-          pitch: 0.17167158836487495,
-          rotation: 0,
-          target: "14-cn-h-06---phng-khch",
-        },
-      ],
-      infoHotspots: [],
-    },
-    {
-      id: "18-tin-ch-1",
-      name: "Tiện ích 1",
+      id: "10-tour-360---ch03---3",
+      name: "Căn hộ: 2 phòng ngủ - 2 WC",
       levels: [
         {
           tileSize: 256,
@@ -708,23 +364,119 @@ var APP_DATA = {
       ],
       faceSize: 1500,
       initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
+        pitch: 0.17929469213790838,
+        yaw: -1.0156506100417015,
+        fov: 1.1056506015171,
       },
       linkHotspots: [
         {
-          yaw: -0.9855296042100292,
-          pitch: -0.4758663733394588,
+          yaw: -0.0369892964209928,
+          pitch: 0.16314022519730287,
           rotation: 0,
-          target: "22-tng-th",
+          target: "11-tour-360---ch03---4",
+        },
+        {
+          yaw: 0.507902573938587,
+          pitch: 0.0839493864282268,
+          rotation: 0,
+          target: "9-tour-360---ch03---2",
+        },
+        {
+          yaw: 1.1009453591191498,
+          pitch: 0.11880186200901122,
+          rotation: 0,
+          target: "8-tour-360---ch03---1",
+        },
+        {
+          yaw: 1.4666427391074466,
+          pitch: 0.09469087624669825,
+          rotation: 0,
+          target: "17-tour-360---ch05---4",
+        },
+        {
+          yaw: 1.887085468543308,
+          pitch: 0.01353384210727171,
+          rotation: 0,
+          target: "26-tour-360---tong-the-lk-vung---final",
         },
       ],
       infoHotspots: [],
     },
     {
-      id: "19-tin-ch-2",
-      name: "Tiện ích 2",
+      id: "11-tour-360---ch03---4",
+      name: "Phòng ngủ",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+      ],
+      faceSize: 1000,
+      initialViewParameters: {
+        pitch: 0.15538392800692158,
+        yaw: 0,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: 2.21586336216067,
+          pitch: 0.3641070649550002,
+          rotation: 0,
+          target: "10-tour-360---ch03---3",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "12-tour-360---ch03---5",
+      name: "WC",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+        {
+          tileSize: 512,
+          size: 2048,
+        },
+      ],
+      faceSize: 2048,
+      initialViewParameters: {
+        pitch: 0.18898122338030987,
+        yaw: 1.5839215892720677,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: 0.40759011945150725,
+          pitch: 0.26572992407632334,
+          rotation: 0,
+          target: "16-tour-360---ch05---3",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "13-tour-360---ch04---1",
+      name: "Căn hộ Studio",
       levels: [
         {
           tileSize: 256,
@@ -746,29 +498,91 @@ var APP_DATA = {
       ],
       faceSize: 1500,
       initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
+        pitch: 0.11785133853191354,
+        yaw: -1.6407841545985775,
+        fov: 1.1056506015171,
       },
       linkHotspots: [
         {
-          yaw: 0.9401538304437125,
-          pitch: 0.031015281264071604,
+          yaw: 1.5372041975137414,
+          pitch: 0.10089455204707853,
           rotation: 0,
-          target: "20-tin-ch-3",
-        },
-        {
-          yaw: 1.557404708094933,
-          pitch: 0.04276727824877291,
-          rotation: 0,
-          target: "21-tin-ch-4",
+          target: "26-tour-360---tong-the-lk-vung---final",
         },
       ],
       infoHotspots: [],
     },
     {
-      id: "20-tin-ch-3",
-      name: "Tiện ích 3",
+      id: "14-tour-360---ch05---1",
+      name: "Phòng ngủ",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+      ],
+      faceSize: 1000,
+      initialViewParameters: {
+        pitch: 0.14144359046434474,
+        yaw: 0.37934861540548503,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: 1.8881700607065266,
+          pitch: 0.07346499371201531,
+          rotation: 0,
+          target: "16-tour-360---ch05---3",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "15-tour-360---ch05---2",
+      name: "Phòng ngủ",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+      ],
+      faceSize: 1000,
+      initialViewParameters: {
+        pitch: 0.10558465203676803,
+        yaw: 0.2979433331296235,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: 1.8421747944869784,
+          pitch: 0.05700014602096459,
+          rotation: 0,
+          target: "16-tour-360---ch05---3",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "16-tour-360---ch05---3",
+      name: "Căn hộ: 2 phòng ngủ - 1 WC (Thang máy)",
       levels: [
         {
           tileSize: 256,
@@ -790,29 +604,79 @@ var APP_DATA = {
       ],
       faceSize: 1500,
       initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
+        pitch: 0.09209405118423675,
+        yaw: -2.824446092549243,
+        fov: 1.1056506015171,
       },
       linkHotspots: [
         {
-          yaw: -0.2896435359699936,
-          pitch: -0.39434084234947164,
+          yaw: -1.283854428024739,
+          pitch: 0.12417902810588544,
           rotation: 0,
-          target: "22-tng-th",
+          target: "15-tour-360---ch05---2",
         },
         {
-          yaw: -2.7936371480326443,
-          pitch: -0.09394679782707271,
+          yaw: -1.0884409188279172,
+          pitch: 0.05516081612863033,
           rotation: 0,
-          target: "19-tin-ch-2",
+          target: "14-tour-360---ch05---1",
+        },
+        {
+          yaw: -0.9636055476964938,
+          pitch: 0.06642269909103149,
+          rotation: 0,
+          target: "12-tour-360---ch03---5",
+        },
+        {
+          yaw: 1.3311516096071347,
+          pitch: 0.05785609208580311,
+          rotation: 0,
+          target: "26-tour-360---tong-the-lk-vung---final",
         },
       ],
       infoHotspots: [],
     },
     {
-      id: "21-tin-ch-4",
-      name: "Tiện ích 4",
+      id: "17-tour-360---ch05---4",
+      name: "WC",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+        {
+          tileSize: 512,
+          size: 2048,
+        },
+      ],
+      faceSize: 2048,
+      initialViewParameters: {
+        pitch: 0.14542865182428244,
+        yaw: 1.669320066058643,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: 0.2849574572654401,
+          pitch: 0.28269605848992185,
+          rotation: 0,
+          target: "10-tour-360---ch03---3",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "18-tour-360---ch07---1",
+      name: "Căn hộ: 2 phòng ngủ - 2 WC (Thang máy)",
       levels: [
         {
           tileSize: 256,
@@ -834,35 +698,336 @@ var APP_DATA = {
       ],
       faceSize: 1500,
       initialViewParameters: {
-        pitch: 0,
-        yaw: 0,
-        fov: 1.5707963267948966,
+        pitch: 0.08643005569311768,
+        yaw: -3.0382718853858393,
+        fov: 1.1056506015171,
       },
       linkHotspots: [
         {
-          yaw: -2.772643492360473,
-          pitch: 0.1032026922694822,
+          yaw: -2.1856084682850536,
+          pitch: 0.10737199775917361,
           rotation: 0,
-          target: "19-tin-ch-2",
+          target: "19-tour-360---ch07---3",
         },
         {
-          yaw: -1.8714270686054526,
-          pitch: -0.3486082898794791,
+          yaw: -1.773679423170103,
+          pitch: 0.04633285447512847,
           rotation: 0,
-          target: "22-tng-th",
+          target: "21-tour-360---ch07---41",
         },
         {
-          yaw: -1.097644940305866,
-          pitch: 0.02677552112337267,
+          yaw: -1.551445138300931,
+          pitch: 0.07609731984205048,
           rotation: 0,
-          target: "20-tin-ch-3",
+          target: "3-tour-360---ch01---4",
+        },
+        {
+          yaw: 1.3456373900325609,
+          pitch: 0.12244591786096848,
+          rotation: 0,
+          target: "26-tour-360---tong-the-lk-vung---final",
         },
       ],
       infoHotspots: [],
     },
     {
-      id: "22-tng-th",
-      name: "Tổng thể",
+      id: "19-tour-360---ch07---3",
+      name: "Phòng ngủ",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+        {
+          tileSize: 512,
+          size: 2048,
+        },
+      ],
+      faceSize: 1500,
+      initialViewParameters: {
+        pitch: 0.19523125220971949,
+        yaw: 0.027677186386442898,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: 1.606919259013166,
+          pitch: 0.08063375519372151,
+          rotation: 0,
+          target: "18-tour-360---ch07---1",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "20-tour-360---ch07---4",
+      name: "WC",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+        {
+          tileSize: 512,
+          size: 2048,
+        },
+      ],
+      faceSize: 2048,
+      initialViewParameters: {
+        pitch: 0.27358620747674856,
+        yaw: 1.6860772084378466,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [],
+      infoHotspots: [],
+    },
+    {
+      id: "21-tour-360---ch07---41",
+      name: "Phòng ngủ master",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+        {
+          tileSize: 512,
+          size: 2048,
+        },
+      ],
+      faceSize: 1500,
+      initialViewParameters: {
+        pitch: 0.14542791695631152,
+        yaw: 0.05698369759309685,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: 1.7550656224189218,
+          pitch: 0.07648982019128603,
+          rotation: 0,
+          target: "18-tour-360---ch07---1",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "22-tour-360---tien-ich-1---final",
+      name: "Sảnh cư dân",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+        {
+          tileSize: 512,
+          size: 2048,
+        },
+      ],
+      faceSize: 1500,
+      initialViewParameters: {
+        pitch: -0.03785110167355654,
+        yaw: 0.8645240977695785,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: -0.8372760382518933,
+          pitch: -0.530385899415645,
+          rotation: 0,
+          target: "26-tour-360---tong-the-lk-vung---final",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "23-tour-360---tien-ich-2----final",
+      name: "Sân thể thao đa năng",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+        {
+          tileSize: 512,
+          size: 2048,
+        },
+      ],
+      faceSize: 1500,
+      initialViewParameters: {
+        pitch: 0.059152265504973656,
+        yaw: 0.9879555378964042,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: 1.5686917889519716,
+          pitch: 0.05332726606831706,
+          rotation: 0,
+          target: "25-tour-360---tien-ich-4---final",
+        },
+        {
+          yaw: 0.8172814547536262,
+          pitch: 0.0546589410900431,
+          rotation: 0,
+          target: "24-tour-360---tien-ich-3---final",
+        },
+        {
+          yaw: -0.14957847642565625,
+          pitch: -0.2643545944775365,
+          rotation: 0,
+          target: "26-tour-360---tong-the-lk-vung---final",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "24-tour-360---tien-ich-3---final",
+      name: "Công viên trung tâm",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+        {
+          tileSize: 512,
+          size: 2048,
+        },
+      ],
+      faceSize: 1500,
+      initialViewParameters: {
+        pitch: 0.025894329184939835,
+        yaw: 0.3581801421546018,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: -0.2522137389273542,
+          pitch: -0.3641896420394737,
+          rotation: 0,
+          target: "26-tour-360---tong-the-lk-vung---final",
+        },
+        {
+          yaw: -2.8934392494654357,
+          pitch: -0.11190967129580542,
+          rotation: 0,
+          target: "23-tour-360---tien-ich-2----final",
+        },
+        {
+          yaw: 2.9400581952354994,
+          pitch: -0.11463998507909245,
+          rotation: 0,
+          target: "25-tour-360---tien-ich-4---final",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "25-tour-360---tien-ich-4---final",
+      name: "Khu thể chất Wonder Land",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+        {
+          tileSize: 512,
+          size: 2048,
+        },
+      ],
+      faceSize: 1500,
+      initialViewParameters: {
+        pitch: 0.009189318832563131,
+        yaw: -1.0150612505320176,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: -1.1694947442308568,
+          pitch: 0.027752061816290308,
+          rotation: 0,
+          target: "24-tour-360---tien-ich-3---final",
+        },
+        {
+          yaw: -1.8657175131525339,
+          pitch: -0.3141428127804211,
+          rotation: 0,
+          target: "26-tour-360---tong-the-lk-vung---final",
+        },
+        {
+          yaw: -2.7746754268924985,
+          pitch: 0.03501144625920993,
+          rotation: 0,
+          target: "23-tour-360---tien-ich-2----final",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "26-tour-360---tong-the-lk-vung---final",
+      name: "Tổng thể dự án",
       levels: [
         {
           tileSize: 256,
@@ -884,70 +1049,108 @@ var APP_DATA = {
       ],
       faceSize: 1750,
       initialViewParameters: {
-        yaw: 0.10649438965348068,
-        pitch: 0.35634520353427845,
-        fov: 1.4987764001991262,
+        pitch: 0.45911376037225793,
+        yaw: 0.07992895404282407,
+        fov: 1.1056506015171,
       },
       linkHotspots: [
         {
-          yaw: 0.308115283013068,
-          pitch: 0.6064786440303838,
-          rotation: 6.283185307179586,
-          target: "18-tin-ch-1",
+          yaw: 0.47802016504139644,
+          pitch: 0.26701473412786925,
+          rotation: 0,
+          target: "18-tour-360---ch07---1",
         },
         {
-          yaw: 1.014418333854767,
-          pitch: 0.30757854070545143,
+          yaw: 1.2129117547194106,
+          pitch: 0.26863133997829536,
           rotation: 0,
-          target: "20-tin-ch-3",
+          target: "23-tour-360---tien-ich-2----final",
         },
         {
-          yaw: 1.1390668389981187,
-          pitch: 0.24091627361463885,
+          yaw: 1.1173164325847527,
+          pitch: 0.25074765521776854,
           rotation: 0,
-          target: "21-tin-ch-4",
+          target: "25-tour-360---tien-ich-4---final",
         },
         {
-          yaw: 1.2525798100325733,
-          pitch: 0.25371683476302564,
+          yaw: 1.0243103837825327,
+          pitch: 0.3040665870442467,
           rotation: 0,
-          target: "19-tin-ch-2",
+          target: "24-tour-360---tien-ich-3---final",
         },
         {
-          yaw: 0.07587779633178116,
-          pitch: 0.26194833422652053,
+          yaw: 0.33160050135297325,
+          pitch: 0.5764045353696616,
           rotation: 0,
-          target: "10-cn-h-04---phng-khch",
+          target: "22-tour-360---tien-ich-1---final",
         },
         {
-          yaw: -0.09261415523662819,
-          pitch: 0.25534713593609126,
+          yaw: 0.31976404906567346,
+          pitch: 0.24036614783817356,
           rotation: 0,
-          target: "8-cn-h-03---phng-khch",
+          target: "16-tour-360---ch05---3",
         },
         {
-          yaw: -0.2832947032612445,
-          pitch: 0.18997221306225853,
+          yaw: 0.06617460625200522,
+          pitch: 0.29493318274385594,
           rotation: 0,
-          target: "3-cn-h-02---phng-khch",
+          target: "13-tour-360---ch04---1",
         },
         {
-          yaw: -0.3603830444608356,
-          pitch: 0.3026669480351085,
+          yaw: -0.13295309791492826,
+          pitch: 0.29504557912608576,
           rotation: 0,
-          target: "0-cn-h-01---phng-khch",
+          target: "10-tour-360---ch03---3",
         },
         {
-          yaw: 0.4702521265589308,
-          pitch: 0.32122256609279276,
+          yaw: -0.2899215509786064,
+          pitch: 0.2537143932081385,
           rotation: 0,
-          target: "14-cn-h-06---phng-khch",
+          target: "4-tour-360---ch02---1",
         },
         {
-          yaw: 0.28986010031462683,
-          pitch: 0.2835975292056787,
+          yaw: -0.4070600648986602,
+          pitch: 0.3295915629620563,
           rotation: 0,
-          target: "13-cn-h-05---phng-khch",
+          target: "0-tour-360---ch01---1",
+        },
+      ],
+      infoHotspots: [],
+    },
+    {
+      id: "27-tour-360---wc",
+      name: "WC",
+      levels: [
+        {
+          tileSize: 256,
+          size: 256,
+          fallbackOnly: true,
+        },
+        {
+          tileSize: 512,
+          size: 512,
+        },
+        {
+          tileSize: 512,
+          size: 1024,
+        },
+        {
+          tileSize: 512,
+          size: 2048,
+        },
+      ],
+      faceSize: 2048,
+      initialViewParameters: {
+        pitch: 0.3568784753256846,
+        yaw: 1.6812438234054579,
+        fov: 1.1056506015171,
+      },
+      linkHotspots: [
+        {
+          yaw: 0.29520890825076584,
+          pitch: 0.3337673186124128,
+          rotation: 0,
+          target: "0-tour-360---ch01---1",
         },
       ],
       infoHotspots: [],

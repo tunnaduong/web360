@@ -20,7 +20,7 @@
   var bowser = window.bowser;
   var screenfull = window.screenfull;
   var data = window.APP_DATA;
-  var audio = new Audio("serenade.mp3");
+  var audio = new Audio("bg-music.mp3");
 
   audio.loop = true;
 
@@ -523,7 +523,8 @@
   }
 
   // Display the initial scene.
-  var initialScene = findSceneById("22-tng-th") || scenes[0];
+  var initialScene =
+    findSceneById("26-tour-360---tong-the-lk-vung---final") || scenes[0];
   switchScene(initialScene);
 
   // Initialize lightgallery when DOM is ready
