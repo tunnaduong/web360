@@ -588,7 +588,7 @@
   // Handle modals
   var modals = {
     "Thông tin dự án": "infoModal",
-    "Mặt bằng": "layoutModal",
+    "Mặt bằng dự án": "layoutModal",
     "Vị trí dự án": "locationModal",
     "Album ảnh": "galleryModal",
     "Phim giới thiệu dự án": "videoModal",
