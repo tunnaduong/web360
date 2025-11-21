@@ -101,6 +101,16 @@
   // Initialize viewer.
   var viewer = new Marzipano.Viewer(panoElement, viewerOpts);
 
+  // Cấu hình scroll zoom để tăng độ nhạy: lăn ít mà zoom nhiều hơn
+  var scrollZoomMethod = viewer.controls().method("scrollZoom");
+  if (scrollZoomMethod && scrollZoomMethod.instance) {
+    // Tăng zoomDelta để zoom nhiều hơn khi lăn chuột ít (mặc định là 0.001)
+    // Tăng lên 0.002 = gấp 2 lần, lăn ít mà zoom nhiều hơn
+    if (scrollZoomMethod.instance._opts) {
+      scrollZoomMethod.instance._opts.zoomDelta = 0.002;
+    }
+  }
+
   // Create scenes.
   var scenes = data.scenes.map(function (data) {
     var urlPrefix = "tiles";
@@ -110,10 +120,10 @@
     );
     var geometry = new Marzipano.CubeGeometry(data.levels);
 
-    var limiter = Marzipano.RectilinearView.limit.traditional(
-      data.faceSize,
-      (100 * Math.PI) / 180,
-      (120 * Math.PI) / 180
+    // Chỉ dùng hfov limiter để kiểm soát zoom
+    var limiter = Marzipano.RectilinearView.limit.hfov(
+      (65 * Math.PI) / 180, // min FOV: 65 degrees (zoom in vừa phải, không quá gần)
+      (145 * Math.PI) / 180 // max FOV: 130 degrees (zoom out vừa phải, tránh méo hình)
     );
     var view = new Marzipano.RectilinearView(
       data.initialViewParameters,
@@ -310,21 +320,25 @@
 
   function switchScene(scene) {
     stopAutorotate();
-    scene.view.setParameters(scene.data.initialViewParameters);
+    // Set FOV mặc định ở mức trung bình (70 độ = 1.22 radians)
+    var defaultParams = Object.assign({}, scene.data.initialViewParameters, {
+      fov: 1.2217304763960306, // 70 degrees - mức trung bình
+    });
+    scene.view.setParameters(defaultParams);
     scene.scene.switchTo();
     startAutorotate();
     // updateSceneName(scene);
     updateSceneList(scene);
-    
+
     // Hide loading when scene is loaded (only on first load)
     if (loadingElement && !loadingHidden) {
       // Wait for scene to render, then hide loading
-      setTimeout(function() {
+      setTimeout(function () {
         if (loadingElement && !loadingHidden) {
           loadingHidden = true;
           loadingElement.classList.add("hidden");
           // Remove from DOM after animation
-          setTimeout(function() {
+          setTimeout(function () {
             if (loadingElement && loadingElement.parentNode) {
               loadingElement.parentNode.removeChild(loadingElement);
             }
