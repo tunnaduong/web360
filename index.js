@@ -734,4 +734,38 @@
         }
       }, 300);
     });
+
+  // Location Carousel Logic
+  (function() {
+    var images = [
+      "img/du-an/vi-tri/Vi tri 1.jpg",
+      "img/du-an/vi-tri/Vi tri 2.jpg"
+    ];
+    var currentIndex = 0;
+    var imgElement = document.getElementById("locationImage");
+    var prevBtn = document.getElementById("locationPrev");
+    var nextBtn = document.getElementById("locationNext");
+
+    function updateImage() {
+      if (imgElement) {
+        imgElement.src = images[currentIndex];
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function(e) {
+        e.stopPropagation(); // Prevent modal from closing
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function(e) {
+        e.stopPropagation(); // Prevent modal from closing
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+      });
+    }
+  })();
 })();

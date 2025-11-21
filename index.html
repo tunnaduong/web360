@@ -260,10 +260,13 @@
         <button class="modal-close ad-modal-close">&times;</button>
         <div class="ad-modal-image-container">
           <img
-            src="img/du-an/Vi tri du an.jpg"
+            src="img/du-an/vi-tri/Vi tri 1.jpg"
             alt="Vị trí dự án"
             class="ad-modal-image"
+            id="locationImage"
           />
+          <button class="carousel-btn prev" id="locationPrev">&lt;</button>
+          <button class="carousel-btn next" id="locationNext">&gt;</button>
         </div>
       </div>
     </div>
@@ -278,57 +281,300 @@
           <div class="placeholder-content">
             <div class="gallery-grid" id="gallery-grid">
               <a
-                href="https://picsum.photos/800/600?random=3"
-                data-lg-size="800-600"
+                href="img/du-an/album/TT_11_2.jpg"
+                data-lg-size="4000-2250"
               >
                 <img
-                  src="https://picsum.photos/300/200?random=3"
-                  alt="Gallery 1"
+                  src="img/du-an/album/TT_11_2.jpg"
+                  alt="TT_11_2.jpg"
                 />
               </a>
               <a
-                href="https://picsum.photos/800/600?random=4"
-                data-lg-size="800-600"
+                href="img/du-an/album/TT_12_1.jpg"
+                data-lg-size="4000-2250"
               >
                 <img
-                  src="https://picsum.photos/300/200?random=4"
-                  alt="Gallery 2"
+                  src="img/du-an/album/TT_12_1.jpg"
+                  alt="TT_12_1.jpg"
                 />
               </a>
               <a
-                href="https://picsum.photos/800/600?random=5"
-                data-lg-size="800-600"
+                href="img/du-an/album/TT_12_2.jpg"
+                data-lg-size="4000-2250"
               >
                 <img
-                  src="https://picsum.photos/300/200?random=5"
-                  alt="Gallery 3"
+                  src="img/du-an/album/TT_12_2.jpg"
+                  alt="TT_12_2.jpg"
                 />
               </a>
               <a
-                href="https://picsum.photos/800/600?random=6"
-                data-lg-size="800-600"
+                href="img/du-an/album/TT_1_1.jpg"
+                data-lg-size="4000-2250"
               >
                 <img
-                  src="https://picsum.photos/300/200?random=6"
-                  alt="Gallery 4"
+                  src="img/du-an/album/TT_1_1.jpg"
+                  alt="TT_1_1.jpg"
                 />
               </a>
               <a
-                href="https://picsum.photos/800/600?random=7"
-                data-lg-size="800-600"
+                href="img/du-an/album/Tien ich_Cong vien.jpg"
+                data-lg-size="4000-2288"
               >
                 <img
-                  src="https://picsum.photos/300/200?random=7"
-                  alt="Gallery 5"
+                  src="img/du-an/album/Tien ich_Cong vien.jpg"
+                  alt="Tien ich_Cong vien.jpg"
                 />
               </a>
               <a
-                href="https://picsum.photos/800/600?random=8"
-                data-lg-size="800-600"
+                href="img/du-an/album/Tien ich_San the thao.jpg"
+                data-lg-size="4000-2250"
               >
                 <img
-                  src="https://picsum.photos/300/200?random=8"
-                  alt="Gallery 6"
+                  src="img/du-an/album/Tien ich_San the thao.jpg"
+                  alt="Tien ich_San the thao.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/Tien ich_Sanh.jpg"
+                data-lg-size="4000-2288"
+              >
+                <img
+                  src="img/du-an/album/Tien ich_Sanh.jpg"
+                  alt="Tien ich_Sanh.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/Tien ich_View Ban cong.png"
+                data-lg-size="4000-2288"
+              >
+                <img
+                  src="img/du-an/album/Tien ich_View Ban cong.png"
+                  alt="Tien ich_View Ban cong.png"
+                />
+              </a>
+              <a
+                href="img/du-an/album/PC-13-1.jpg"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/PC-13-1.jpg"
+                  alt="PC-13-1.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/PC-14-1.jpg"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/PC-14-1.jpg"
+                  alt="PC-14-1.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/PC-5-1.jpg"
+                data-lg-size="5000-2812"
+              >
+                <img
+                  src="img/du-an/album/PC-5-1.jpg"
+                  alt="PC-5-1.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH01 - Khach bep - 2.jpg"
+                data-lg-size="2560-1440"
+              >
+                <img
+                  src="img/du-an/album/CH01 - Khach bep - 2.jpg"
+                  alt="CH01 - Khach bep - 2.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH01 - Khach bep.jpg"
+                data-lg-size="2560-1440"
+              >
+                <img
+                  src="img/du-an/album/CH01 - Khach bep.jpg"
+                  alt="CH01 - Khach bep.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH01 - Phong ngu 1 - 1.jpg"
+                data-lg-size="2560-1440"
+              >
+                <img
+                  src="img/du-an/album/CH01 - Phong ngu 1 - 1.jpg"
+                  alt="CH01 - Phong ngu 1 - 1.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH01 - Phong ngu 2.jpg"
+                data-lg-size="2560-1440"
+              >
+                <img
+                  src="img/du-an/album/CH01 - Phong ngu 2.jpg"
+                  alt="CH01 - Phong ngu 2.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH02 - Khach bep - 1.jpg"
+                data-lg-size="2560-1440"
+              >
+                <img
+                  src="img/du-an/album/CH02 - Khach bep - 1.jpg"
+                  alt="CH02 - Khach bep - 1.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH02 - Khach bep - 2.jpg"
+                data-lg-size="2560-1440"
+              >
+                <img
+                  src="img/du-an/album/CH02 - Khach bep - 2.jpg"
+                  alt="CH02 - Khach bep - 2.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH02 - Phong ngu 1 - 2.jpg"
+                data-lg-size="2560-1440"
+              >
+                <img
+                  src="img/du-an/album/CH02 - Phong ngu 1 - 2.jpg"
+                  alt="CH02 - Phong ngu 1 - 2.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH02 - Phong ngu 1.jpg"
+                data-lg-size="2560-1440"
+              >
+                <img
+                  src="img/du-an/album/CH02 - Phong ngu 1.jpg"
+                  alt="CH02 - Phong ngu 1.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH02 - Phong ngu 2 - 3.jpg"
+                data-lg-size="2560-1440"
+              >
+                <img
+                  src="img/du-an/album/CH02 - Phong ngu 2 - 3.jpg"
+                  alt="CH02 - Phong ngu 2 - 3.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH03 - 1.jpg"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH03 - 1.jpg"
+                  alt="CH03 - 1.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH03 - 2.jpg"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH03 - 2.jpg"
+                  alt="CH03 - 2.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH03 - 4.jpg"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH03 - 4.jpg"
+                  alt="CH03 - 4.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH03 - 5.jpg"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH03 - 5.jpg"
+                  alt="CH03 - 5.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH03 - 9.jpg"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH03 - 9.jpg"
+                  alt="CH03 - 9.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH04 - 1.jpg"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH04 - 1.jpg"
+                  alt="CH04 - 1.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH04 - 2.jpg"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH04 - 2.jpg"
+                  alt="CH04 - 2.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH04 - 3.jpg"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH04 - 3.jpg"
+                  alt="CH04 - 3.jpg"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH07 - 1.png"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH07 - 1.png"
+                  alt="CH07 - 1.png"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH07 - 3.png"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH07 - 3.png"
+                  alt="CH07 - 3.png"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH07 - 4.png"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH07 - 4.png"
+                  alt="CH07 - 4.png"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH07 - 5.png"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH07 - 5.png"
+                  alt="CH07 - 5.png"
+                />
+              </a>
+              <a
+                href="img/du-an/album/CH07 - 6.png"
+                data-lg-size="4000-2250"
+              >
+                <img
+                  src="img/du-an/album/CH07 - 6.png"
+                  alt="CH07 - 6.png"
                 />
               </a>
             </div>
