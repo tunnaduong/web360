@@ -739,7 +739,8 @@
   (function() {
     var images = [
       "img/du-an/vi-tri/Vi tri 1.jpg",
-      "img/du-an/vi-tri/Vi tri 2.jpg"
+      "img/du-an/vi-tri/Vi tri 2.jpg",
+      "img/du-an/vi-tri/Vi tri 3.jpg",
     ];
     var currentIndex = 0;
     var imgElement = document.getElementById("locationImage");
